@@ -2,9 +2,57 @@ body {
     font-family: 'Ubuntu';
 }
 
-.container{
+.container {
     max-width: 1167px;
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
+}
+
+.btn-light {
+    text-align: center;
+    background: #2962ff;
+    color: white;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 2px 10px 0 rgba(41, 98, 255, 0.7);
+    }
+
+    &:active {
+        background: #1843bb;
+        box-shadow: none;
+    }
+}
+
+.btn-yellow {
+    text-align: center;
+    background: #ffca28;
+    color: white;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 2px 10px 0 rgba(255, 202, 40, 0.71);
+    }
+
+    &:active {
+        background: #ffa000;
+        box-shadow: none;
+    }
+}
+
+.btn-dark {
+    text-align: center;
+    background: #0d47a1;
+    color: white;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 2px 10px 0 rgba(13, 71, 161, 0.7);
+    }
+
+    &:active {
+        background: #092e68;
+        box-shadow: none;
+    }
 }
