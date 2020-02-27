@@ -1,1 +1,48 @@
-p что там
+.header-top
+    .container.header-top__cont
+        .burger
+        nav.main-nav
+            ul
+                li
+                    a(href="#") О магазине
+                li
+                    a(href="#") Доставка
+                li
+                    a(href="#") Оплата
+                li
+                    a(href="#") Условия соглашения
+                li
+                    a(href="#") Новости
+                li
+                    a(href="#") Контакты
+        .login
+            a(href="#").login__enter Вход
+            a(href="#").login__reg Регистрация
+
+.header-bottom
+    .container.header-bottom__cont
+        .header-bottom__item
+            .logo
+                .logo__img
+                    img(src="img/logo.svg")
+                        
+                ul.logo__article
+                    li Seendy.ru
+                    li Доставка зарубежных товаров
+                                
+            form.search.header_search(action="#")
+                input(type="text" placeholder="Поиск по сайту")
+                button(type="submit").btn-dark Найти
+        
+        .header-bottom__item
+            ul.header-list
+                li
+                    a(href="tel:88009800000").header-phone 8 800 980 00 00
+                li
+                    a(href="#").header-link Перезвоните мне
+            
+            ul.header-list
+                li
+                    a(href="#").header-basket Корзина пуста
+                li
+                    a(href="#").header-link Перейти в каталог
