@@ -1,1 +1,50 @@
-p Контент
+.container
+    .main-slider.swiper-container
+        .swiper-wrapper
+            .swiper-slide(style="background-image:url(img/man.jpg)")
+                .main-slider__content
+                    p Очки HTC VR <br>со скидкой 30%  
+                    button.btn-yellow.slider-btn Перейти в каталог
+            .swiper-slide(style="background-image:url(img/slide.png)")
+                .main-slider__content
+                    p Тестовый товар 
+                    button.btn-yellow.slider-btn Перейти в каталог
+            .swiper-slide(style="background-image:url(img/man.jpg)")
+                .main-slider__content
+                    p Тестовый товар 2  
+                    button.btn-yellow.slider-btn Перейти в каталог
+            .swiper-slide(style="background-image:url(img/slide.png)")
+                .main-slider__content
+                    p Тестовый товар  3 
+                    button.btn-yellow.slider-btn Перейти в каталог
+                    
+        .slider-navigate
+            .swiper-button-prev
+            .swiper-pagination        
+            .swiper-button-next
+    
+    .steps-shipping
+        h1.main-title Шоппинг напрямую в популярных<br> интернет-магазинах мира!
+        p.steps-shipping__article Большинство зарубежных магазинов не доставляют в Россию          
+        p.steps-shipping__title Выбирайте товары из США, Китая, Европы и других стран,<br> а мы доставим Ваш товар!
+        
+        .steps-list
+            ul
+                li
+                    .step-img
+                        img(src="img/step-1.svg")
+                    .steps-list__title Выберите товар
+                    p Оплачивайте товар из нашего 
+                        a(href="#") каталога
+                        |, где указаны реальные цены и ссылки на официальный магазин
+                li
+                    .step-img
+                        img(src="img/step-2.svg")
+                    .steps-list__title Оформите доставку
+                    p Магазины отправляют товар на наши склады зарубежом. А мы доставляем товар вам в руки!
+                li
+                    .step-img
+                        img(src="img/step-3.svg")
+                    .steps-list__title Получите ваш товар
+                    p Посылка придет уже через 7-10 дней! Заберите в пункте выдачи или курьером
+            
