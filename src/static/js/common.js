@@ -5,11 +5,15 @@ $(document).ready(function() {
     $('.burger').click(function() {
         $('.main-nav').fadeToggle();
     });
-    
+
     $(window).resize(function() {
         if (window.matchMedia("(min-width: 992px)").matches) {
             $('.main-nav').removeAttr('style');
         }
+    });
+
+    $('.cat-btn').click(function(){
+        $('.cat-btn__list').fadeToggle();
     });
 
 });

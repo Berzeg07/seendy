@@ -20,29 +20,72 @@
             a(href="#").login__reg Регистрация
 
 .header-bottom
-    .container.header-bottom__cont
-        .header-bottom__item
-            .logo
-                .logo__img
-                    img(src="img/logo.svg")
-                        
-                ul.logo__article
-                    li Seendy.ru
-                    li Доставка зарубежных товаров
-                                
-            form.search.header_search(action="#")
-                input(type="text" placeholder="Поиск по сайту")
-                button(type="submit").btn-dark Найти
-        
-        .header-bottom__item
-            ul.header-list
-                li
-                    a(href="tel:88009800000").header-phone 8 800 980 00 00
-                li
-                    a(href="#").header-link Перезвоните мне
+    .container
+        .header-bottom__cont
+            .header-bottom__item
+                .logo
+                    .logo__img
+                        img(src="img/logo.svg")
+                            
+                    ul.logo__article
+                        li Seendy.ru
+                        li Доставка зарубежных товаров
+                                    
+                form.search.header_search(action="#")
+                    input(type="text" placeholder="Поиск по сайту")
+                    button(type="submit").btn-dark Найти
             
-            ul.header-list
+            .header-bottom__item
+                ul.header-list
+                    li
+                        a(href="tel:88009800000").header-phone 8 800 980 00 00
+                    li
+                        a(href="#").header-link Перезвоните мне
+                
+                ul.header-list
+                    li
+                        a(href="#").header-basket Корзина пуста
+                    li
+                        a(href="#").header-link Перейти в каталог
+        
+        .header-navigate
+            .cat-btn.btn-dark 
+                span Каталог товаров
+                ul.cat-btn__list
+                    li
+                        a(href="#") Каталог товаров 1
+                    li
+                        a(href="#") Каталог товаров товаров 2
+                    li
+                        a(href="#") Каталог 3
+                    li
+                        a(href="#") Каталог 4
+                    li
+                        a(href="#") Каталог 5
+                    li
+                        a(href="#") Каталог 6
+                    li
+                        a(href="#") Каталог 7
+                    li
+                        a(href="#") Каталог 8
+            
+            ul.header-navigate__link
                 li
-                    a(href="#").header-basket Корзина пуста
+                    a(href="#") Как это работает?
                 li
-                    a(href="#").header-link Перейти в каталог
+                    a(href="#") Цены
+                li
+                    a(href="#") Магазины
+                li
+                    a(href="#") Помощь
+                li
+                    a(href="#") Скидки и акции
+                li
+                    a(href="#") Информация
+                li
+                    a(href="#") Отзывы о нас                    
+                                
+                                
+                            
+    
+    
