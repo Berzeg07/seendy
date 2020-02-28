@@ -355,9 +355,20 @@
 }
 
 .success-block-btn {
+	margin: 0 auto;
 	margin-top: 45px;
 	width: 176px;
 	height: 52px;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	border-radius: 7px;
+}
+
+/* Registration
+========================================== */
+.registration {
+	padding: 31px 0 140px;
 }
