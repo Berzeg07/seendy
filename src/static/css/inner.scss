@@ -626,7 +626,9 @@
 
 	margin-bottom: 10px;
 
-	span {
+	&::after {
+		content: "*";
+		
 		color: tomato;
 	}
 }
