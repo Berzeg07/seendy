@@ -1,29 +1,100 @@
 .product-card
+    .container
+        .breadcrumbs
+            ul.breadcrumbs-list
+                li
+                    a(href="/").breadcrumbs-link.breadcrumbs-link_home Home 
+                li
+                    a(href="#") Apple	
+                li
+                    a(href="#") Apple Watch
+                li
+                    a Смарт-часы Apple Watch S2 Sport 42mm Silver Al/White (MNPJ2RU/A)
+        .product-block
+            .product__top
+                .column
+                    .fotorama(data-nav="thumbs")
+                        img(src="img/watch.jpg")
+                        img(src="img/watch.jpg")
+                        img(src="img/watch.jpg")
+                        img(src="img/watch.jpg")
+                        img(src="img/watch.jpg")
+                        img(src="img/watch.jpg")
+                .column
+                    h1.main-title.product__title СМАРТ-ЧАСЫ APPLE <br>WATCH S2 SPORT <br>42MM SILVER <br>AL/WHITE
+                    ul.add-review
+                        li
+                            span.product-status.instock В наличии 
+                        li
+                            .rating-stars.reviews-list__stars
+                                input(type="radio" name="radio1" id="a1" class="radio1" checked)
+                                input(type="radio" name="radio1" id="a2" class="radio2" checked)
+                                input(type="radio" name="radio1" id="a3" class="radio3")
+                                input(type="radio" name="radio1" id="a4" class="radio4")
+                                input(type="radio" name="radio1" id="a5" class="radio5")
+                                label(for="a1").label1
+                                label(for="a2").label2
+                                label(for="a3").label3
+                                label(for="a4").label4
+                                label(for="a5").label5
+                        li
+                            button.add-review__btn Оставить отзыв
 
-	.container
+                    .product-option
+                        .product-option__title Доступные опции
+                        .product-option__type Цвет
 
-		.breadcrumbs
-			ul.breadcrumbs-list
-				li
-					a(href="/").breadcrumbs-link.breadcrumbs-link_home Home 
-					
-				li
-					a(href="#") Apple	
-			
-				li
-					a(href="#") Apple Watch
-					
-				li
-					a Смарт-часы Apple Watch S2 Sport 42mm Silver Al/White (MNPJ2RU/A)
+                        .check-color
+                            span.check-color__item.check-color__item_grey.is-active
+                            span.check-color__item.check-color__item_red
+                            span.check-color__item.check-color__item_orange
+                            span.check-color__item.check-color__item_blue
 
-		.product
-			.product-column1
-				.swiper-container.gallery-top
-					.swiper-wrapper
-						.swiper-slide(style="background-image:url(img/watch.jpg)")
+                        .product-option__type Размер
 
-				.swiper-container.gallery-thumbs
-					.swiper-wrapper
-						.swiper-slide(style="background-image:url(img/watch.jpg)")
-			.product-column2
-				h1.product-title СМАРТ-ЧАСЫ APPLE <br> WATCH S2 SPORT <br> 42MM SILVER AL/WHITE
+                        ul.product-option__size
+                            li 38mm  (+10 000.00 р.)
+                            li 42mm  (+12 000.00 р.)
+
+                    ul.product-payment
+                        li
+                            .product-payment__price 30 139 ₽
+                        li
+                            .switch__number(text-align__center)
+                                span.switch__button -
+                                input(type="text" value="1" disabled="disabled")#quantity 
+                                span.switch__button +
+
+                    .product-action
+                        button.btn-light.add-basket В корзину
+                        button.btn-dark.buy-click Вупить в один клик
+                        .favor
+
+                    ul.product-info
+                        li
+                            span Производитель:
+                                a(href="#") Apple
+                        li
+                            span Код товара:
+                            |art752816
+                        li
+                            span Артикул:
+                            |752816
+
+                    ul.product-adv
+                        li
+                            .product-adv__img
+                                img(src="img/icon-1.svg")
+                            a(href="#") Качество
+                        li
+                            .product-adv__img
+                                img(src="img/icon-2.svg")
+                            a(href="#") Доставка
+                        li
+                            .product-adv__img
+                                img(src="img/icon-3.svg")
+                            a(href="#") Оплата
+                        li
+                            .product-adv__img
+                                img(src="img/icon-4.svg")
+                            a(href="#") Обмен
