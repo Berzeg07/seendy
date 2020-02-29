@@ -22,7 +22,7 @@
                         img(src="img/watch.jpg")
                 .column
                     h1.main-title.product__title СМАРТ-ЧАСЫ APPLE <br>WATCH S2 SPORT <br>42MM SILVER <br>AL/WHITE
-                    ul.add-review
+                    ul.add-review.border
                         li
                             span.product-status.instock В наличии 
                         li
@@ -40,45 +40,52 @@
                         li
                             button.add-review__btn Оставить отзыв
 
-                    .product-option
+                    .product-option.border
                         .product-option__title Доступные опции
                         .product-option__type Цвет
 
                         .check-color
-                            span.check-color__item.check-color__item_grey.is-active
-                            span.check-color__item.check-color__item_red
-                            span.check-color__item.check-color__item_orange
-                            span.check-color__item.check-color__item_blue
+                            span.check-color__item.is-active
+                                img(src="img/grey-color.png")
+                            span.check-color__item
+                                img(src="img/brown-color.png")
+                            span.check-color__item
+                                img(src="img/orange-color.png")
+                            span.check-color__item
+                                img(src="img/blue-color.png")
 
                         .product-option__type Размер
 
                         ul.product-option__size
-                            li 38mm  (+10 000.00 р.)
+                            li.is-active 38mm  (+10 000.00 р.)
                             li 42mm  (+12 000.00 р.)
+                    .action-block.border
+                        ul.product-payment
+                            li
+                                .product-payment__price 30 139 ₽
+                            li
+                                .switch-number(text-align__center)
+                                    span.switch-button.switch-button_minus -
+                                    input(type="text" value="1" disabled="disabled").quantity#quantity 
+                                    span.switch-button.switch-button_plus +
 
-                    ul.product-payment
-                        li
-                            .product-payment__price 30 139 ₽
-                        li
-                            .switch__number(text-align__center)
-                                span.switch__button -
-                                input(type="text" value="1" disabled="disabled")#quantity 
-                                span.switch__button +
-
-                    .product-action
-                        button.btn-light.add-basket В корзину
-                        button.btn-dark.buy-click Вупить в один клик
-                        .favor
+                        ul.product-action
+                            li
+                                button.btn-light.add-basket В корзину
+                            li
+                                button.btn-dark.buy-click Вупить в один клик
+                            li
+                                .favor
 
                     ul.product-info
                         li
-                            span Производитель:
+                            span Производитель: 
                                 a(href="#") Apple
                         li
-                            span Код товара:
+                            span Код товара: 
                             |art752816
                         li
-                            span Артикул:
+                            span Артикул: 
                             |752816
 
                     ul.product-adv
@@ -98,3 +105,27 @@
                             .product-adv__img
                                 img(src="img/icon-4.svg")
                             a(href="#") Обмен
+
+            .tab-block
+                .tabs-link
+                    a(href="#").is-active Обмен
+                    a(href="#") Характеристики
+                    a(href="#") Отзывы
+                    a(href="#") Отзывы
+                    a(href="#") Отзывы
+                    a(href="#") Отзывы
+
+                .main-text
+                    p Apple Watch Series 2 – это многофункциональное устройство, которое значительно расширяет возможности пользователя. Он может просматривать важнейшие новости, отвечать на сообщения, пользоваться приложениями, а также подавать команды голосовому помощнику Siri, не доставая iPhone из кармана.
+
+                    p.text__title Спортивные функции
+
+                    p Теперь Apple Watch снабжены встроенным GPS-трекером, который отслеживает каждый метр, пройдённый человеком. Датчик сердечной активности не только ведёт мониторинг здоровья человека, но и помогает рассчитывать такие важные для спортсменов показатели, как период восстановления организма после нагрузок и скорость насыщения крови кислородом.
+
+                    p.text__title Интелектуальные подсказки
+
+                    p Фирменное спортивное приложение анализирует повседневную активность человека и разрабатывает на основе этих сведений рекомендации для последующих тренировок. Оно также позволяет следить за выполнением целей, зарабатывать различные награды и делиться достижениями с друзьями.
+
+                    p.text__title Стиль и элегантность
+
+                    p Металлический корпус с плавными обводами и оригинальной окраской – это лишь одна из составляющих успеха гаджета от Apple. Для устройства предлагается очень широкий выбор ремешков – от простых спортивных аксессуаров до настоящих шедевров, изготовленных из кожи ручной выделки.
