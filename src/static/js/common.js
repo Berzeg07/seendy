@@ -1,4 +1,16 @@
 $(document).ready(function() {
+
+     /*Tabs*/
+    $('.tab a').click(function(e) {
+        e.preventDefault();
+        $('a').removeClass('active');
+        $(this).addClass('active');
+        var tab = $(this).attr('href');
+        $('.tab__box').not(tab).css({'display':'none'});
+        $(tab).fadeIn(400);       
+    });
+    $('.tab a:first').click();
+    
     // font-family: 'Ubuntu';
     // font-family: 'Roboto';
 
@@ -6,23 +18,23 @@ $(document).ready(function() {
     $('#total').val(itemprice);
 
     $(".switch__number .switch__button").on("click", function() {
-     var $button = $(this);
-     var oldValue = $button.parent().find("input").val();
-     if ($button.text() == "+") {
+       var $button = $(this);
+       var oldValue = $button.parent().find("input").val();
+       if ($button.text() == "+") {
         var newVal = parseFloat(oldValue) + 1;
     }
     else {
         if (oldValue > 1) {
-           var newVal = parseFloat(oldValue) - 1;
-       } else {
-           newVal = 1;
-       }
-   }
-   $button.parent().find("input").val(newVal);
+         var newVal = parseFloat(oldValue) - 1;
+     } else {
+         newVal = 1;
+     }
+ }
+ $button.parent().find("input").val(newVal);
 
-   var quantity = $('#quantity').val();
-   var total = itemprice*quantity;
-   $('#total').val(total);
+ var quantity = $('#quantity').val();
+ var total = itemprice*quantity;
+ $('#total').val(total);
 });		
 
     $('.burger').click(function() {
@@ -143,7 +155,7 @@ function init(){
         });
         myMap.behaviors.disable('scrollZoom');
     }
-    
+
 
 // var galleryThumbs = new Swiper('.gallery-thumbs', {
 //     spaceBetween: 10,
