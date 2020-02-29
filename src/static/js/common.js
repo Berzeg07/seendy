@@ -16,6 +16,10 @@ $(document).ready(function() {
         $('.cat-btn__list').fadeToggle();
     });
 
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+
 });
 
 var mainSlider = new Swiper('.main-slider', {

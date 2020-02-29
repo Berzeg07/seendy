@@ -7,13 +7,13 @@
 					span /
 				li.breadcrumbs-item
 					a Регистрация
-		h1.main-title Регистрация
+		h1.main-title.registration-title Регистрация
 		.authorized
 			p Я уже зарегестрирован
 			a(href="#").btn-light Авторизоваться
 		form
 			fieldset
-				<legend><span>1</span> Основные данные</legend>
+				<legend><span class="list">1</span> Основные данные</legend>
 				
 					label(for="firstname") Имя
 						span *
@@ -36,17 +36,17 @@
 					input(type="text" placeholder="Факс" id="fax")
 
 			fieldset
-				<legend><span>2</span> Ваш адрес</legend>
+				<legend><span class="list">2</span> Ваш адрес</legend>
 				
 					label(for="country") Страна
 						span *
-					select(id="country")
+					select(id="country").js-example-basic-single
 						option(value="Россия") Россия
 						option(value="США") США
 						option(value="Германия") Германия
 					label(for="region") Регион / Область
 						span *
-					select(id="region")
+					select(id="region").js-example-basic-single
 						option(value="Свердловская") Свердловская обл.
 						option(value="Амурская") Амурская обл.
 						option(value="Владимирская") Владимирская обл.
@@ -73,7 +73,7 @@
 					input(type="text" placeholder="Адрес2" id="adress2")
 
 			fieldset
-				<legend><span>3</span> Пароль</legend>
+				<legend><span class="list">3</span> Пароль</legend>
 					
 				label(for="password") Пароль
 					span *
