@@ -11,7 +11,7 @@
 		.authorized
 			p Я уже зарегестрирован
 			a(href="#").btn-light Авторизоваться
-		form
+		form.registration-form
 			fieldset
 				<legend><span class="list">1</span> Основные данные</legend>
 					.column-inner
@@ -95,19 +95,19 @@
 						label(for="password2") Подтверждение пароля 
 							span *
 						input(type="password" placeholder="Подтверждение пароля" id="password2" required)
+			.subscription-outer
+				fieldset
+					legend Подписка на новости
+					.subscripion-select-box
+						.subscription-select
+							input(type="radio" id="yes" name="radio")
+							label(for="yes") Да
+						.subscription-select
+							input(type="radio" id="no" name="radio")
+							label(for="no") Нет
 
-			fieldset
-				legend Подписка на новости
-				.subscripion-select-box
-					.subscription-select
-						input(type="radio" id="yes" name="radio")
-						label(for="yes") Да
-					.subscription-select
-						input(type="radio" id="no" name="radio")
-						label(for="no") Нет
+				.subscription
+					input(type="checkbox" checked="checked" id="rule")
+					label(for="rule") Я прочитал <a href="#">Политика Безопасности</a> и согласен с условиями
 
-			.subscription
-				input(type="checkbox" checked="checked" id="rule")
-				label(for="rule") Я прочитал <a href="#">Политика Безопасности</a> и согласен с условиями
-
-			button(type="submit").btn-light Зарегестрироваться
+				button(type="submit").btn-light Зарегестрироваться

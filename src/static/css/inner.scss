@@ -381,9 +381,25 @@
 	margin-bottom: 31px;
 }
 
+.registration-form {
+	@media (min-width : 992px) {
+		width: 945px;
+		margin: 0 auto;
+	}
+
+	@media (min-width : 1165px) {
+		width: auto;
+		margin: 0;
+	}
+}
+
 .registration .authorized {
 	background: #F5F5F5;
 	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 	max-width: 565px;
 	width: 100%;
@@ -394,6 +410,8 @@
 	@media (min-width : 992px) {
 		margin-right: 0;
 		margin-left: 0;
+
+		display: block;
 	}
 
 	p {
@@ -418,6 +436,7 @@
 
 .registration button[type="submit"] {
 	max-width: 274px;
+	margin: 0 auto;
 	width: 100%;
 	height: 52px;
 
@@ -426,6 +445,10 @@
 	justify-content: center;
 
 	border-radius: 7px;
+
+	@media (min-width : 992px) {
+		margin: 0;
+	}
 }
 
 .registration fieldset {
@@ -442,6 +465,11 @@
 
 	display: flex;
 	align-items: center;
+	text-align: center;
+
+	@media (min-width : 992px) {
+		text-align: left;
+	}
 
 	font-weight: bold;
 	font-size: 24px;
@@ -688,8 +716,20 @@
 	display: block;
 
 	cursor: pointer;
+	text-align: justify;
 
+	width: 226px;
+	margin: 0 auto;
 	padding-left: 30px;
+
+	@media (min-width : 768px) {
+		width: 482px;
+	}
+
+	@media (min-width : 992px) {
+		width: auto;
+	}
+
 
 	&::before {
 		content: "";
@@ -733,6 +773,11 @@
 
 .subscripion-select-box {
 	display: flex;
+	justify-content: center;
+
+	@media (min-width : 992px) {
+		justify-content: flex-start;
+	}
 }
 
 .subscription-select {
