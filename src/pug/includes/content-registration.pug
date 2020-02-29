@@ -2,11 +2,11 @@
 	.container
 		.breadcrumbs
 			ul.breadcrumbs-list
-				li.breadcrumbs-item
+				li
 					a(href="/").breadcrumbs-link.breadcrumbs-link_home Домой
-					span /
 				li.breadcrumbs-item
 					a Регистрация
+
 		h1.main-title.registration-title Регистрация
 		.authorized
 			p Я уже зарегестрирован
@@ -16,27 +16,23 @@
 				<legend><span class="list">1</span> Основные данные</legend>
 					.column-inner
 						.column-box
-							label(for="firstname") Имя 
-								span *
+							label(for="firstname") Имя 	
 							input(type="text" placeholder="Имя" id="firstname" required)
 						
 						.column-box
-							label(for="secondname") Фамилия 
-								span *
+							label(for="secondname") Фамилия 	
 							input(type="text" placeholder="Фамилия" id="secondname" required)
 						
 						.column-box
 							label(for="email") E-Mail 
-								span *
 							input(type="email" placeholder="E-Mail" id="email" required)
 
 						.column-box
 							label(for="phonenumber") Телефон 
-								span *
 							input(type="text" placeholder="Телефон" id="phonenumber" required)
+
 						.column-box
-							label(for="fax") Факс
-							
+							label(for="fax") Факс 
 							input(type="text" placeholder="Факс" id="fax")
 
 			fieldset
@@ -45,43 +41,40 @@
 					.column-inner
 						.column-box
 							label(for="country") Страна 
-								span *
+
 							.my-select.my-select_registration
 								select(id="country" required).js-example-basic-single
 									option(value="Россия") Россия
 									option(value="США") США
 									option(value="Германия") Германия
 						.column-box
-							label(for="region") Регион / Область
-								span *
+							label(for="region") Регион / Область 
+
 							.my-select.my-select_registration
 								select(id="region" required).js-example-basic-single
 									option(value="Свердловская") Свердловская обл.
 									option(value="Амурская") Амурская обл.
 									option(value="Владимирская") Владимирская обл.
+
 						.column-box
-							label(for="city") Город
-								span *
+							label(for="city") Город 
 							input(type="text" placeholder="Город" id="city" required)
+
 						.column-box
-							label(for="index") Индекс
-								
+							label(for="index") Индекс	
 							input(type="text" placeholder="Индекс" id="index")
 
 					.column-inner-box
 						.column-box
-							label(for="company") Компания
-								
+							label(for="company") Компания	
 							input(type="text" placeholder="Компания" id="company")
 						
 						.column-box
-							label(for="adress") Адрес
-								span *
+							label(for="adress") Адрес 
 							input(type="text" placeholder="Адрес" id="adress" required)
 
 						.column-box
-							label(for="adress2") Адрес2
-								
+							label(for="adress2") Адрес2 
 							input(type="text" placeholder="Адрес2" id="adress2")
 
 			fieldset
@@ -89,12 +82,12 @@
 				.column-inner
 					.column-box
 						label(for="password") Пароль 
-							span *
 						input(type="password" placeholder="Пароль" id="password" required)
+
 					.column-box
 						label(for="password2") Подтверждение пароля 
-							span *
 						input(type="password" placeholder="Подтверждение пароля" id="password2" required)
+
 			.subscription-outer
 				fieldset
 					legend Подписка на новости
