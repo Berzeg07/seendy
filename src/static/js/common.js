@@ -16,9 +16,11 @@ $(document).ready(function() {
         $('.cat-btn__list').fadeToggle();
     });
 
-    $(document).ready(function() {
+
         $('.js-example-basic-single').select2();
-    });
+        $('.favor').click(function(){
+            $(this).toggleClass('active');
+        });
 
 });
 
