@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('.main-nav').fadeToggle();
     });
 
-
+    $('.fotorama').fotorama();
 
     $(function($) {
         $(document).click(function(event) {
@@ -29,6 +29,10 @@ $(document).ready(function() {
             event.stopPropagation();
         });
     });
+
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        $('.main-nav').removeClass('nav');
+    }
 
     $(window).resize(function() {
         if (window.matchMedia("(min-width: 992px)").matches) {
