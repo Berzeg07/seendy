@@ -14,85 +14,100 @@
 		form
 			fieldset
 				<legend><span class="list">1</span> Основные данные</legend>
-				
-					label(for="firstname") Имя
-						span *
-					input(type="text" placeholder="Имя" id="firstname")
-					
-					label(for="secondname") Фамилия
-						span *
-					input(type="text" placeholder="Фамилия" id="secondname")
+					.column-inner
+						.column-box
+							label(for="firstname") Имя 
+								span *
+							input(type="text" placeholder="Имя" id="firstname" required)
+						
+						.column-box
+							label(for="secondname") Фамилия 
+								span *
+							input(type="text" placeholder="Фамилия" id="secondname" required)
+						
+						.column-box
+							label(for="email") E-Mail 
+								span *
+							input(type="email" placeholder="E-Mail" id="email" required)
 
-					label(for="email") E-Mail
-						span *
-					input(type="email" placeholder="E-Mail" id="email")
-
-					label(for="phonenumber") Телефон
-						span *
-					input(type="text" placeholder="Телефон" id="phonenumber")
-
-					label(for="fax") Факс
-					
-					input(type="text" placeholder="Факс" id="fax")
+						.column-box
+							label(for="phonenumber") Телефон 
+								span *
+							input(type="text" placeholder="Телефон" id="phonenumber" required)
+						.column-box
+							label(for="fax") Факс
+							
+							input(type="text" placeholder="Факс" id="fax")
 
 			fieldset
 				<legend><span class="list">2</span> Ваш адрес</legend>
-				
-					label(for="country") Страна
-						span *
-					select(id="country").js-example-basic-single
-						option(value="Россия") Россия
-						option(value="США") США
-						option(value="Германия") Германия
-					label(for="region") Регион / Область
-						span *
-					select(id="region").js-example-basic-single
-						option(value="Свердловская") Свердловская обл.
-						option(value="Амурская") Амурская обл.
-						option(value="Владимирская") Владимирская обл.
-
-					label(for="city") Город
-						span *
-					input(type="text" placeholder="Город" id="city")
 					
-					label(for="index") Индекс
+					.column-inner
+						.column-box
+							label(for="country") Страна 
+								span *
+							.my-select.my-select_registration
+								select(id="country" required).js-example-basic-single
+									option(value="Россия") Россия
+									option(value="США") США
+									option(value="Германия") Германия
+						.column-box
+							label(for="region") Регион / Область
+								span *
+							.my-select.my-select_registration
+								select(id="region" required).js-example-basic-single
+									option(value="Свердловская") Свердловская обл.
+									option(value="Амурская") Амурская обл.
+									option(value="Владимирская") Владимирская обл.
+						.column-box
+							label(for="city") Город
+								span *
+							input(type="text" placeholder="Город" id="city" required)
+						.column-box
+							label(for="index") Индекс
+								
+							input(type="text" placeholder="Индекс" id="index")
+
+					.column-inner-box
+						.column-box
+							label(for="company") Компания
+								
+							input(type="text" placeholder="Компания" id="company")
 						
-					input(type="text" placeholder="Индекс" id="index")
+						.column-box
+							label(for="adress") Адрес
+								span *
+							input(type="text" placeholder="Адрес" id="adress" required)
 
-					label(for="company") Компания
-						
-					input(type="text" placeholder="Компания" id="company")
-
-					label(for="adress") Адрес
-						span *
-					input(type="text" placeholder="Адрес" id="adress")
-
-
-					label(for="adress2") Адрес2
-						
-					input(type="text" placeholder="Адрес2" id="adress2")
+						.column-box
+							label(for="adress2") Адрес2
+								
+							input(type="text" placeholder="Адрес2" id="adress2")
 
 			fieldset
 				<legend><span class="list">3</span> Пароль</legend>
-					
-				label(for="password") Пароль
-					span *
-				input(type="password" placeholder="Пароль" id="password")
-
-				label(for="password2") Подтверждение пароля
-					span *
-				input(type="password2" placeholder="Подтверждение пароля" id="password2")
+				.column-inner
+					.column-box
+						label(for="password") Пароль 
+							span *
+						input(type="password" placeholder="Пароль" id="password" required)
+					.column-box
+						label(for="password2") Подтверждение пароля 
+							span *
+						input(type="password" placeholder="Подтверждение пароля" id="password2" required)
 
 			fieldset
 				legend Подписка на новости
-					
-				input(type="radio" id="yes")
-				label(for="yes") Да
+				.subscripion-select-box
+					.subscription-select
+						input(type="radio" id="yes" name="radio")
+						label(for="yes") Да
+					.subscription-select
+						input(type="radio" id="no" name="radio")
+						label(for="no") Нет
 
-				input(type="radio" id="no")
-				label(for="no") Нет
-			
-			input(type="checkbox" checked="checked" id="rule")
-			label(for="rule") Я прочитал <a href="#">Политика Безопасности</a> и согласен с условиями
+			.subscription
+				input(type="checkbox" checked="checked" id="rule")
+				label(for="rule") Я прочитал <a href="#">Политика Безопасности</a> и согласен с условиями
 
 			button(type="submit").btn-light Зарегестрироваться
