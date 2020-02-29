@@ -11,9 +11,9 @@ $(document).ready(function() {
     $(function($) {
         $(document).click(function(event) {
             if ($(event.target).closest(".cat-btn").length)
-            return;
+                return;
             if ($(event.target).closest(".cat-btn__list").length)
-            return;
+                return;
             $(".cat-btn__list").fadeOut();
             event.stopPropagation();
         });
@@ -22,9 +22,9 @@ $(document).ready(function() {
     $(function($) {
         $(document).click(function(event) {
             if ($(event.target).closest(".burger").length)
-            return;
+                return;
             if ($(event.target).closest(".nav").length)
-            return;
+                return;
             $(".nav").fadeOut();
             event.stopPropagation();
         });
@@ -96,7 +96,26 @@ $(document).ready(function() {
 
 });
 
+/*Map*/
 
+ymaps.ready(init);
+
+function init(){ 
+        // Creating the map.    
+        var myMap = new ymaps.Map("map", {
+            // The map center coordinates.
+            // Default order: “latitude, longitude”.
+            // To not manually determine the map center coordinates,
+            // use the Coordinate detection tool.
+            center: [55.734222, 37.573824],
+
+            // Zoom level. Acceptable values:
+            // from 0 (the entire world) to 19.
+            zoom: 17,
+             controls: []
+        });
+
+    }
 
 // var galleryThumbs = new Swiper('.gallery-thumbs', {
 //     spaceBetween: 10,

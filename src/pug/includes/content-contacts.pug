@@ -1,0 +1,44 @@
+.contacts
+	.container
+		ul.breadcrumbs-list
+				li
+					a(href="/").breadcrumbs-link.breadcrumbs-link_home Домой 
+	
+				li
+					a Контакты
+		h1.main-title Контакты
+		
+		.contacts-box
+			form.contacts-form
+				h2 Напишите нам
+				
+				.form-cell
+					label(for="firstname") Имя
+					input(type="text" placeholder="Имя").inputForGlobal
+				
+				.form-cell
+					label(for="email") E-Mail
+					input(type="email" placeholder="E-Mail").inputForGlobal
+				
+				.form-cell
+					label(for="message") Ваш вопрос или сообщение
+					textarea(placeholder="Ваш вопрос или сообщение")
+
+				button(type="submit").btn-light Отправить
+
+			.contacts-infrormation
+
+				h2 Контактная информация
+
+				p.bold У вас общий вопрос?
+				p Напишите или позвоните нам — всё расскажем.
+				p E-mail: contact@tore.com
+				p Телефон: 0 (800) 777-10-20
+				p Служба клиентской поддержки работает с 8:00 до 22:00, без выходных.
+				p.bold Есть замечания или предложения как нам работать лучше?
+				p Россия, г. Москва. Большая Пироговская ул. 17, третий этаж, офис 315
+	#map
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=7293582a-d52e-4d29-9127-18e638c44040&lang=en_US" type="text/javascript"></script>
+
+				

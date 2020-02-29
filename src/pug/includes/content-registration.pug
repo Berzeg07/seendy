@@ -15,31 +15,31 @@
 			fieldset
 				<legend><span class="list">1</span> Основные данные</legend>
 					.column-inner
-						.column-box
+						.form-cell
 							label(for="firstname") Имя 	
-							input(type="text" placeholder="Имя" id="firstname" required)
+							input(type="text" placeholder="Имя" id="firstname" required).inputForGlobal
 						
-						.column-box
+						.form-cell
 							label(for="secondname") Фамилия 	
-							input(type="text" placeholder="Фамилия" id="secondname" required)
+							input(type="text" placeholder="Фамилия" id="secondname" required).inputForGlobal
 						
-						.column-box
+						.form-cell
 							label(for="email") E-Mail 
-							input(type="email" placeholder="E-Mail" id="email" required)
+							input(type="email" placeholder="E-Mail" id="email" required).inputForGlobal
 
-						.column-box
+						.form-cell
 							label(for="phonenumber") Телефон 
-							input(type="text" placeholder="Телефон" id="phonenumber" required)
+							input(type="text" placeholder="Телефон" id="phonenumber" required).inputForGlobal
 
-						.column-box
+						.form-cell
 							label(for="fax") Факс 
-							input(type="text" placeholder="Факс" id="fax")
+							input(type="text" placeholder="Факс" id="fax").inputForGlobal
 
 			fieldset
 				<legend><span class="list">2</span> Ваш адрес</legend>
 					
 					.column-inner
-						.column-box
+						.form-cell
 							label(for="country") Страна 
 
 							.my-select.my-select_registration
@@ -47,7 +47,7 @@
 									option(value="Россия") Россия
 									option(value="США") США
 									option(value="Германия") Германия
-						.column-box
+						.form-cell
 							label(for="region") Регион / Область 
 
 							.my-select.my-select_registration
@@ -56,37 +56,37 @@
 									option(value="Амурская") Амурская обл.
 									option(value="Владимирская") Владимирская обл.
 
-						.column-box
+						.form-cell
 							label(for="city") Город 
-							input(type="text" placeholder="Город" id="city" required)
+							input(type="text" placeholder="Город" id="city" required).inputForGlobal
 
-						.column-box
+						.form-cell
 							label(for="index") Индекс	
-							input(type="text" placeholder="Индекс" id="index")
+							input(type="text" placeholder="Индекс" id="index").inputForGlobal
 
 					.column-inner-box
-						.column-box
+						.form-cell
 							label(for="company") Компания	
-							input(type="text" placeholder="Компания" id="company")
+							input(type="text" placeholder="Компания" id="company").inputForGlobal
 						
-						.column-box
+						.form-cell
 							label(for="adress") Адрес 
-							input(type="text" placeholder="Адрес" id="adress" required)
+							input(type="text" placeholder="Адрес" id="adress" required).inputForGlobal
 
-						.column-box
+						.form-cell
 							label(for="adress2") Адрес2 
-							input(type="text" placeholder="Адрес2" id="adress2")
+							input(type="text" placeholder="Адрес2" id="adress2").inputForGlobal
 
 			fieldset
 				<legend><span class="list">3</span> Пароль</legend>
 				.column-inner
-					.column-box
+					.form-cell
 						label(for="password") Пароль 
-						input(type="password" placeholder="Пароль" id="password" required)
+						input(type="password" placeholder="Пароль" id="password" required).inputForGlobal
 
-					.column-box
+					.form-cell
 						label(for="password2") Подтверждение пароля 
-						input(type="password" placeholder="Подтверждение пароля" id="password2" required)
+						input(type="password" placeholder="Подтверждение пароля" id="password2" required).inputForGlobal
 
 			.subscription-outer
 				fieldset
