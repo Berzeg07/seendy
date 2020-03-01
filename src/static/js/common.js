@@ -230,6 +230,14 @@ $(document).ready(function() {
     });
 });
 
+let buttonBasket = document.querySelectorAll('.basket__button');
+
+    buttonBasket.forEach(function(item) {
+        item.addEventListener('click', function() {
+           this.parentElement.parentElement.remove()
+        });
+    });
+
 /*Map*/
 
 // ymaps.ready(init);

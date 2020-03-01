@@ -15,8 +15,48 @@
 				p Я уже зарегестрирован
 				a(href="#").btn-light Авторизоваться
 
-			fieldset.form-block
+			fieldset.form-block.basket-block
 				<legend><span class="list">1</span> Корзина покупок</legend>
+
+				table.basket
+
+					tr
+						th Изображение
+						th Название
+						th Количество
+						th Цена
+						th Итого
+					tr
+						td.basket-img
+							button(type="button").basket__button Удалить
+							span
+								img(src="img/pop-4.jpg" width="81" height="67" alt="Геймпад Sony DualShock 4 v2 (CUH-ZCT2E) Антрацитовый черный")
+						td 
+							p Геймпад Sony DualShock 4 v2 (CUH-ZCT2E) Антрацитовый черный
+						td 1
+						td
+						td
+
+					tr
+						td.basket-img
+							button(type="button").basket__button Удалить
+							span
+								img(src="img/pop-4.jpg" width="81" height="67" alt="Геймпад Sony DualShock 4 v2 (CUH-ZCT2E) Антрацитовый черный")
+						td 
+							p Геймпад Sony DualShock 4 v2 (CUH-ZCT2E) Антрацитовый черный
+						td 1
+						td
+						td
+
+				.basket-payment
+					p 	Предварительная стоимость: 
+						span 14 380.00 р.
+
+					p 	Фиксированная стоимость доставки: 
+						span 14 380.00 р.
+
+					p 	Итого: 
+						span 14 380.00 р.
 
 			form.order-form
 				fieldset.form-block
@@ -99,11 +139,11 @@
 
 							.subscripion-select-box
 								.subscription-select
-									input(type="radio" id="payment" name="radio" checked)
+									input(type="radio" id="payment" name="radio2" checked)
 									label(for="payment") Оплата при получении
 
 								.subscription-select
-									input(type="radio" id="transfer" name="radio")
+									input(type="radio" id="transfer" name="radio2")
 									label(for="transfer") Банковский перевод
 
 				.bonus-block
