@@ -22,8 +22,31 @@
                         .custom-range.price-range
                         
                     .sidebar__discount.shadow-block
-                        .subscription
+                        .my-subscription
                             input(type="checkbox")#discountCheck
                             label(for="discountCheck") Товары со скидкой
+                        .sidebar__count 244
+                    
+                    .sidebar__color.shadow-block
+                        .sidebar__title Цвет
+                        ul.color-pick
+                            li.my-subscription
+                                input(type="checkbox" name="color-brown")#brownCheck
+                                label(for="brownCheck") Коричневый
+                                    .color-pick__img
+                                        img(src="img/brown-color.png")
+                            
+                            li.my-subscription
+                                input(type="checkbox" name="color-pink")#pinkCheck
+                                label(for="pinkCheck") Розовый
+                                    .color-pick__img
+                                        img(src="img/color-pink.png")
+                                            
+                            li.my-subscription
+                                input(type="checkbox" name="color-grey")#greyCheck
+                                label(for="pinkCheck") Серый
+                                    .color-pick__img
+                                        img(src="img/grey-color.png")
+                        
                         
             .catalog__content    
