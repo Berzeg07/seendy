@@ -1674,7 +1674,7 @@ body {
 
 .recom-slider {
     margin-top: 0;
-    @media(min-width: 992px){
+    @media(min-width: 992px) {
         margin-bottom: 80px;
     }
 
@@ -1707,4 +1707,193 @@ body {
     color: #A0A0A0;
     font-size: 14px;
     margin-left: 12px;
+}
+
+.custom-range.ui-widget.ui-widget-content {
+    background: #90CAF9;
+    border-radius: 10em;
+    border: none;
+    height: 6px;
+
+    .ui-state-default {
+        background: #2962FF url("../img/sircle.png") no-repeat center;
+        width: 26px;
+        height: 26px;
+        border-radius: 10em;
+        border: none;
+        top: -.6em;
+        cursor: pointer;
+    }
+}
+
+.range-val {
+    width: 80px;
+    text-align: center;
+}
+
+.deliv-comp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media(min-width: 1280px) {
+        justify-content: space-between;
+    }
+
+    &__item {
+        margin-bottom: 37px;
+        padding-top: 22px;
+        padding-bottom: 25px;
+        width: 274px;
+        height: 201px;
+        background: #FFFFFF;
+        box-shadow: 0 6px 19px rgba(0, 0, 0, 0.141308);
+        border-radius: 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__item.is-active {
+        box-shadow: 0 6px 36px rgba(13, 71, 161, 0.563511);
+
+        .deliv-comp__price {
+            color: white;
+            background: #2962FF;
+            border-radius: 23px;
+            padding: 13px 23px;
+        }
+    }
+}
+
+.deliv-current {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 50px;
+    @media(min-width: 992px) {
+        margin-bottom: 130px;
+    }
+
+    thead {
+        td {
+            padding: 15px 0;
+            color: #757575;
+            font-size: 14px;
+            font-weight: 600;
+            @media(max-width: 767px) {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .deliv-current__price {
+        font-weight: 400;
+    }
+}
+
+.deliv-comp__price,
+.deliv-comp__title {
+    color: #2C2C2C;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.deliv-comp__days {
+    color: #9E9E9E;
+}
+
+.deliv-current__img {
+    margin-right: 7px;
+}
+
+.deliv-current__item {
+    display: flex;
+    align-items: center;
+}
+
+.form-calc__list {
+    @media(min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li {
+        margin-bottom: 25px;
+        width: 100%;
+        @media(min-width: 400px) {
+            width: 300px;
+            margin: 0 auto 25px;
+        }
+
+        &:not(:last-child) {
+            @media(min-width: 768px) {
+                width: 32%;
+            }
+        }
+
+        &:last-child {
+            @media(min-width: 768px) {
+                width: 371px;
+
+                .form-calc__inner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .calc-range {
+                    margin-bottom: 0;
+                }
+
+                .range-block {
+                    width: 270px;
+                }
+            }
+        }
+        @media(min-width: 1280px) {
+            margin: 0 0 25px;
+
+            &:first-child,
+            &:nth-child(2) {
+                width: 274px;
+            }
+
+            &:nth-child(3) {
+                width: 177px;
+            }
+        }
+    }
+}
+
+.delivery-calc__title {
+    margin-bottom: 40px;
+    @media(min-width: 992px) {
+        margin-bottom: 60px;
+    }
+}
+
+.calc-range {
+    margin-bottom: 25px;
+}
+
+.form-calc__btn {
+    max-width: 369px;
+    width: 100%;
+    height: 52px;
+    border-radius: 6px;
+}
+
+.form-calc__btn-wrap {
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    @media(min-width: 992px) {
+        margin-bottom: 62px;
+    }
 }

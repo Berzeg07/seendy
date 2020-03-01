@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    /*Tabs*/
     $('.tab a').click(function(e) {
         e.preventDefault();
         $('a').removeClass('active');
@@ -25,18 +24,35 @@ $(document).ready(function() {
     });
     $('.tabs-link a:first').click();
 
-    $('.check-color__item').click(function(){
+    $('.check-color__item').click(function() {
         $('.check-color__item').removeClass('is-active');
         $(this).addClass('is-active');
     });
 
-    $('.product-option__size li').click(function(){
+    $('.product-option__size li').click(function() {
         $('.product-option__size li').removeClass('is-active');
         $(this).addClass('is-active');
     });
 
     // font-family: 'Ubuntu';
     // font-family: 'Roboto';
+
+    $('.deliv-comp .deliv-comp__item').click(function(e) {
+        e.preventDefault();
+        $('.deliv-comp__item').removeClass('is-active');
+        $(this).addClass('is-active');
+        var img = $(this).find('.deliv-comp__img img');
+        var imgSrc = $(img).attr('src');
+        var compName = $(this).find('.deliv-comp__title').text();
+        var days = $(this).find('.deliv-comp__days').text();
+        var sum = $(this).find('.deliv-comp__price').text();
+        var tableImg = $('.deliv-current__img img');
+        $(tableImg).attr('src', imgSrc);
+        $('.deliv-current__title').html(compName);
+        $('.deliv-current__days').html(days);
+        $('.deliv-current__price').html(sum);
+    });
+    $('.deliv-comp .deliv-comp__item:first').click();
 
     var itemprice = $('#productPrice').text();
     $('#quantity').val('1');
@@ -111,6 +127,19 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 
+    $(function() {
+        $('.calc-range').slider({
+            min: 0.5,
+            max: 10,
+            step: 0.5,
+            value: 3,
+            slide: function(event, ui) {
+                $(".range-val").val(ui.value);
+            }
+        });
+        $(".range-val").val($(".calc-range").slider("value"));
+    });
+
     var mainSlider = new Swiper('.brends-slider', {
         spaceBetween: 0,
         slidesPerView: 6,
@@ -181,9 +210,6 @@ $(document).ready(function() {
         },
         effect: 'fade'
     });
-
-
-
 });
 
 /*Map*/
