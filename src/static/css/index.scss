@@ -1951,21 +1951,31 @@ body {
 .sidebar__count {
     background: #2962FF;
     display: inline-block;
-    border-radius: 13px;
+    border-radius: 10em;
     color: white;
     font-size: 14px;
     text-align: center;
-    padding: 6px 9px;
+    padding: 5px 9px;
 }
 
-.sidebar__discount {
+.sidebar__discount,
+.sidebar__item,
+.state-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.state-list li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
 .color-pick {
     li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         &:not(:last-child) {
             margin-bottom: 16px;
         }
@@ -1983,4 +1993,17 @@ body {
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.sidebar__size {
+    .my-select{
+        height: 36px;
+    }
+    .my-select .select2-selection, .my-select .select2 {
+        height: 36px;
+    }
+
+    .my-select .select2-selection__arrow {
+        right: 10px !important;
+    }
 }
