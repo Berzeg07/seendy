@@ -1,0 +1,79 @@
+.delivery-calc
+    .container
+        .breadcrumbs
+            ul.breadcrumbs-list
+                li
+                    a(href="/").breadcrumbs-link.breadcrumbs-link_home
+                li
+                    a(href="/").breadcrumbs-link Калькулятор доставки
+
+        h1.main-title.delivery-calc__title Калькулятор доставки
+        
+        form(action="#").form-calc
+            ul.form-calc__list
+                li.form-cell
+                    label Страна 
+                    .my-select
+                        select.js-example-basic-single
+                            option Россия
+                            option США
+                            option Франция
+                li.form-cell
+                    label Город
+                    input(type="text").inputForGlobal
+                li.form-cell
+                    label Индекс
+                    input(type="text").inputForGlobal
+                li.form-cell
+                    label Вес посылки 
+                    .form-calc__inner
+                        .range-block
+                            .calc-range.custom-range
+                        input(type="text").range-val.inputForGlobal
+            .form-calc__btn-wrap
+                button(type="submit").btn-light.form-calc__btn Расчет доставки
+        
+        .deliv-comp
+            .deliv-comp__item.is-active
+                .deliv-comp__img
+                    img(src="img/econom_logo.png")
+                .deliv-comp__title Econom
+                .deliv-comp__days 20-30 дней
+                .deliv-comp__price $114.99
+            .deliv-comp__item
+                .deliv-comp__img
+                    img(src="img/econom_logo.png")
+                .deliv-comp__title Econom2
+                .deliv-comp__days 10-15 дней
+                .deliv-comp__price $150.99
+            .deliv-comp__item
+                .deliv-comp__img
+                    img(src="img/econom_logo.png")
+                .deliv-comp__title Econom3
+                .deliv-comp__days 35-40 дней
+                .deliv-comp__price $90.99
+            .deliv-comp__item
+                .deliv-comp__img
+                    img(src="img/econom_logo.png")
+                .deliv-comp__title Econom4
+                .deliv-comp__days 20-25 дней
+                .deliv-comp__price $30.99
+        
+        table.deliv-current
+            thead
+                tr
+                    td Название службы доставки
+                    td Сроки
+                    td Стоимость
+                    td Описание
+            tbody
+                tr
+                    td
+                        .deliv-current__item
+                            .deliv-comp__img.deliv-current__img
+                                img(src="img/econom_logo.png")
+                            .deliv-comp__title.deliv-current__title Econom
+                    td
+                        .deliv-comp__days.deliv-current__days 20-25 дней
+                    td      
+                        .deliv-comp__price.deliv-current__price $150.99
