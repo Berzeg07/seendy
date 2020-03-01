@@ -1,0 +1,126 @@
+.order
+	.container
+		.breadcrumbs
+			ul.breadcrumbs-list
+				li
+					a(href="/").breadcrumbs-link.breadcrumbs-link_home Домой
+				li
+					a(href="/") Корзина
+				li.breadcrumbs-item
+					a Оформление заказа
+
+			h1.main-title Оформление заказа
+
+			.my-authorized
+				p Я уже зарегестрирован
+				a(href="#").btn-light Авторизоваться
+
+			fieldset.form-block
+				<legend><span class="list">1</span> Корзина покупок</legend>
+
+			form.order-form
+				fieldset.form-block
+					<legend><span class="list">2</span> Информация клиента</legend>
+					.order-inner.order-inner_top
+						.form-cell
+									label.required(for="firstname") Имя 	
+									input(type="text" placeholder="Имя" id="firstname" required).inputForGlobal
+
+						.form-cell
+									label.required(for="email") E-Mail 
+									input(type="email" placeholder="E-Mail" id="email" required).inputForGlobal
+
+						.form-cell
+								label.required(for="phonenumber") Телефон 
+								input(type="text" placeholder="Телефон" id="phonenumber" required).inputForGlobal
+
+						.form-cell
+								label.required(for="country") Страна 
+
+								.my-select.my-select_registration
+									select(id="country" required).js-example-basic-single
+										option(value="Россия") Россия
+										option(value="США") США
+										option(value="Германия") Германия
+						.form-cell
+							label.required(for="region") Регион / Область 
+
+							.my-select.my-select_registration
+								select(id="region" required).js-example-basic-single
+									option(value="Свердловская") Свердловская обл.
+									option(value="Амурская") Амурская обл.
+									option(value="Владимирская") Владимирская обл.
+
+						.form-cell
+								label.required(for="city") Город 
+								input(type="text" placeholder="Город" id="city" required).inputForGlobal
+
+					.form-cell.form-cell__comment
+						label(for="comment") Коментарий
+						textarea(placeholder="Напишите свой комментарий")
+
+					.my-subscription
+						input(type="checkbox" checked="checked" id="new-registration")
+						label(for="new-registration") Я хочу зарегестрироваться
+					
+					.order-inner.order-inner__bottom
+						.form-cell
+							label.required(for="password") Пароль 
+							input(type="password" placeholder="Пароль" id="password" required).inputForGlobal
+
+						.form-cell
+							label.required(for="password2") Подтверждение пароля 
+							input(type="password" placeholder="Подтверждение пароля" id="password2" required).inputForGlobal
+
+				fieldset.form-block.delivery
+					<legend><span class="list">3</span> Способы доставки</legend>
+				
+					.delivery-block
+						h2 Выберите удобный способ доставки для данного заказа
+
+						.subscripion-select-box
+							.subscription-select
+								h3 Единая ставка
+								
+								input(type="radio" id="single" name="radio" checked)
+								label(for="single") Фиксированная стоймость доставки - 5.00 р.
+
+							.subscription-select
+								h3 Бесплатная доставка
+								
+								input(type="radio" id="free" name="radio")
+								label(for="free") Бесплатная доставка - 0.00 р.
+
+				fieldset.form-block.pay
+					<legend><span class="list">4</span> Способы оплаты</legend>
+					
+					.pay-block
+							h2 Выберите способ оплаты для данного заказа
+
+							.subscripion-select-box
+								.subscription-select
+									input(type="radio" id="payment" name="radio" checked)
+									label(for="payment") Оплата при получении
+
+								.subscription-select
+									input(type="radio" id="transfer" name="radio")
+									label(for="transfer") Банковский перевод
+
+				.bonus-block
+					.bonus-column
+						label(for="cupon") Использовать купон на скидку 
+						.bonus-inner
+							input(type="text" id="cupon" placeholder="Код купона").inputForGlobal 
+							button(type="button").btn-light Применить
+
+					.bonus-column
+						label(for="certificate") Использовать подарочный сертификат
+						.bonus-inner
+							input(type="text" id="certificate" placeholder="Код сертификата").inputForGlobal
+							button(type="button").btn-light Применить
+
+				.my-subscription.agree
+						input(type="checkbox" checked="checked" id="agree")
+						label(for="agree") Я прочитал Условия соглашения и согласен с условиями
+
+				button(type="submit").btn-light.sub Оформить заказ

@@ -8,39 +8,39 @@
 					a Регистрация
 
 		h1.main-title.registration-title Регистрация
-		.authorized
+		.my-authorized
 			p Я уже зарегестрирован
 			a(href="#").btn-light Авторизоваться
 		form.registration-form
-			fieldset
+			fieldset.form-block
 				<legend><span class="list">1</span> Основные данные</legend>
 					.column-inner
 						.form-cell
-							label(for="firstname") Имя 	
+							label.required(for="firstname") Имя 	
 							input(type="text" placeholder="Имя" id="firstname" required).inputForGlobal
 						
 						.form-cell
-							label(for="secondname") Фамилия 	
+							label.required(for="secondname") Фамилия 	
 							input(type="text" placeholder="Фамилия" id="secondname" required).inputForGlobal
 						
 						.form-cell
-							label(for="email") E-Mail 
+							label.required(for="email") E-Mail 
 							input(type="email" placeholder="E-Mail" id="email" required).inputForGlobal
 
 						.form-cell
-							label(for="phonenumber") Телефон 
+							label.required(for="phonenumber") Телефон 
 							input(type="text" placeholder="Телефон" id="phonenumber" required).inputForGlobal
 
 						.form-cell
 							label(for="fax") Факс 
 							input(type="text" placeholder="Факс" id="fax").inputForGlobal
 
-			fieldset
+			fieldset.form-block
 				<legend><span class="list">2</span> Ваш адрес</legend>
 					
 					.column-inner
 						.form-cell
-							label(for="country") Страна 
+							label.required(for="country") Страна 
 
 							.my-select.my-select_registration
 								select(id="country" required).js-example-basic-single
@@ -48,7 +48,7 @@
 									option(value="США") США
 									option(value="Германия") Германия
 						.form-cell
-							label(for="region") Регион / Область 
+							label.required(for="region") Регион / Область 
 
 							.my-select.my-select_registration
 								select(id="region" required).js-example-basic-single
@@ -57,7 +57,7 @@
 									option(value="Владимирская") Владимирская обл.
 
 						.form-cell
-							label(for="city") Город 
+							label.required(for="city") Город 
 							input(type="text" placeholder="Город" id="city" required).inputForGlobal
 
 						.form-cell
@@ -70,26 +70,26 @@
 							input(type="text" placeholder="Компания" id="company").inputForGlobal
 						
 						.form-cell
-							label(for="adress") Адрес 
+							label.required(for="adress") Адрес 
 							input(type="text" placeholder="Адрес" id="adress" required).inputForGlobal
 
 						.form-cell
 							label(for="adress2") Адрес2 
 							input(type="text" placeholder="Адрес2" id="adress2").inputForGlobal
 
-			fieldset
+			fieldset.form-block
 				<legend><span class="list">3</span> Пароль</legend>
 				.column-inner
 					.form-cell
-						label(for="password") Пароль 
+						label.required(for="password") Пароль 
 						input(type="password" placeholder="Пароль" id="password" required).inputForGlobal
 
 					.form-cell
-						label(for="password2") Подтверждение пароля 
+						label.required(for="password2") Подтверждение пароля 
 						input(type="password" placeholder="Подтверждение пароля" id="password2" required).inputForGlobal
 
 			.subscription-outer
-				fieldset
+				fieldset.form-block
 					legend Подписка на новости
 					.subscripion-select-box
 						.subscription-select
@@ -99,7 +99,7 @@
 							input(type="radio" id="no" name="radio")
 							label(for="no") Нет
 
-				.subscription
+				.my-subscription
 					input(type="checkbox" checked="checked" id="rule")
 					label(for="rule") Я прочитал <a href="#">Политика Безопасности</a> и согласен с условиями
 

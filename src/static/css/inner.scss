@@ -380,7 +380,13 @@
 	}
 }
 
-.registration .authorized {
+.registration .my-authorized {
+	margin-bottom: 56px;
+
+
+}
+
+.my-authorized {
 	background: #F5F5F5;
 	border-radius: 4px;
 	display: flex;
@@ -391,7 +397,6 @@
 	max-width: 565px;
 	width: 100%;
 	margin: 0 auto;
-	margin-bottom: 56px;
 	padding: 18px 22px 25px;
 
 	@media (min-width : 1165px) {
@@ -438,7 +443,7 @@
 	}
 }
 
-.registration fieldset {
+.form-block {
 	border: none;
 
 	margin: 0;
@@ -446,7 +451,7 @@
 	margin-bottom: 56px;
 }
 
-.registration legend {
+.form-block legend {
 	padding: 0;
 	margin-bottom: 32px;
 
@@ -454,7 +459,7 @@
 	align-items: center;
 	text-align: center;
 
-	@media (min-width : 992px) {
+	@media (min-width : 768px) {
 		text-align: left;
 	}
 
@@ -464,7 +469,7 @@
 	color: #0D47A1;
 }
 
-.registration .list {
+.form-block .list {
 	width: 50px;
 	height: 50px;
 	margin-right: 19px;
@@ -627,18 +632,20 @@ input[type="password"].inputForGlobal {
 	}
 }
 
+.form-cell .required {
+	&::after {
+		content: "*";
+
+		color: tomato;
+	}
+}
+
 .form-cell label {
 	font-size: 14px;
 	line-height: 16px;
 	color: #757575;
 
 	margin-bottom: 10px;
-
-	&::after {
-		content: "*";
-
-		color: tomato;
-	}
 }
 
 .column-inner-box {
@@ -680,15 +687,15 @@ input[type="password"].inputForGlobal {
 	}
 }
 
-.registration .subscription {
+.registration .my-subscription {
 	margin-bottom: 56px;
 }
 
-.subscription input[type="checkbox"]{
+.my-subscription input[type="checkbox"]{
 	display: none;
 }
 
-.subscription  input[type="checkbox"]:checked + label:after{
+.my-subscription  input[type="checkbox"]:checked + label:after{
 	content: "✓";
 
 	color: #2962FF;
@@ -700,16 +707,10 @@ input[type="password"].inputForGlobal {
 	left: 3px;
 }
 
-.subscription label {
-	position: relative;
-	display: block;
-
-	cursor: pointer;
-	text-align: justify;
-
+.registration .my-subscription {
 	width: 226px;
 	margin: 0 auto;
-	padding-left: 30px;
+	margin-bottom: 30px;
 
 	@media (min-width : 768px) {
 		width: 482px;
@@ -718,7 +719,16 @@ input[type="password"].inputForGlobal {
 	@media (min-width : 992px) {
 		width: auto;
 	}
+}
 
+.my-subscription label {
+	position: relative;
+	display: inline-block;
+
+	cursor: pointer;
+	text-align: justify;
+
+	padding-left: 30px;
 
 	&::before {
 		content: "";
@@ -737,7 +747,7 @@ input[type="password"].inputForGlobal {
 	}
 }
 
-.subscription a {
+.my-subscription a {
 	color: #0D47A1;
 }
 
@@ -745,14 +755,14 @@ input[type="password"].inputForGlobal {
 	display: none;
 }
 
-.subscription-select input[type="radio"]:checked + label:after{
+.subscription-select input[type="radio"]:checked + label::after {
 	
 	content: "";
 
 	width: 10px;
 	height: 10px;
 
-	background: #2962FF;
+	background-color: #2962FF;
 	border-radius: 10px;
 
 	position: absolute;
@@ -779,6 +789,7 @@ input[type="password"].inputForGlobal {
 
 .subscription-select label {
 	position: relative;
+	display: block;
 
 	cursor: pointer;
 
@@ -794,7 +805,7 @@ input[type="password"].inputForGlobal {
 		width: 20px;
 		height: 20px;
 
-		background: #FFFFFF;
+		background-color: #FFFFFF;
 		border: 1px solid #AEAEAE;
 		box-sizing: border-box;
 		border-radius: 10px;
@@ -877,7 +888,7 @@ input[type="password"].inputForGlobal {
 	}
 }
 
-.contacts-form textarea {
+.form-cell textarea {
 	background: #FFFFFF;
 	border: 1px solid #AEAEAE;
 	box-sizing: border-box;
@@ -885,18 +896,21 @@ input[type="password"].inputForGlobal {
 
 	font-size: 16px;
 	line-height: 18px;
-	color: #BDBDBD;
+	color: #757575;
 
 	resize: none;
 
 	padding: 17px 18px;
 	margin-bottom: 32px;
 	height: 179px;
+	width: 100%;
 
 	&::placeholder {
 		color: #BDBDBD;
 	}
+}
 
+.contacts-form textarea {
 	@media (min-width : 1165px) {
 		width: 516px;
 		height: 179px;
@@ -1098,5 +1112,299 @@ input[type="password"].inputForGlobal {
 	}
 }
 
+/* Order
+======================================== */
+.order {
+	padding-bottom: 100px;
+}
+
+.order h1 {
+	margin-bottom: 30px;
+}
+
+.order .my-authorized {
+	margin-bottom: 52px;
+}
 
 
+
+.order-form {
+	@media (min-width : 768px) {
+		width: 600px;
+		margin: 0 auto;	
+	} 
+
+	@media (min-width : 992px) {
+		width: 945px;
+		margin: 0 auto;
+	}
+
+	@media (min-width : 1200px) {
+		width: auto;
+		margin: 0;
+	}
+}
+
+.order-form .order-inner {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+
+	@media (min-width : 768px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.form-cell__comment{
+	max-width: 300px;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (min-width : 768px) {
+		max-width: unset;
+		width: auto;
+		margin: 0;
+	}
+}
+
+.order-form .my-subscription {
+	max-width: 300px;
+	width: 100%;
+
+	margin: 0 auto;
+	margin-bottom: 32px;
+
+	@media (min-width : 768px) {
+		max-width: unset;
+		width: auto;
+		margin: 0;
+		margin-bottom: 32px;
+	}
+}
+
+.order-inner {
+	@media (min-width : 992px) {
+		margin-left: -29px;	
+	}
+
+	@media (min-width : 1165px) {
+		margin-left: -17px;
+	}
+}
+
+.order-inner .form-cell {
+	@media (min-width : 992px) {
+		margin-left: 29px;	
+	}
+
+	@media (min-width : 1165px) {
+		margin-left: 17px;
+	}
+}
+
+.order-inner_top {
+	margin-bottom: 32px;
+}
+
+.order-form .order-inner__bottom {
+	margin-bottom: -16px;
+
+	@media (min-width : 992px) {
+		justify-content: flex-start;
+	}
+}
+
+.order-form .inputForGlobal {
+	margin-bottom: 16px;
+
+	@media (min-width : 576px) {
+		width: 300px;
+	}
+
+	@media (min-width : 768px) {
+		width: 295px;
+	}
+
+	@media (min-width : 1167px) {
+		width: 371px;
+	}
+}
+
+.order .form-block h2 {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	color: #525252;
+
+	margin-bottom: 31px;
+}
+
+.form-block .subscripion-select-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-block .subscription-select {
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.delivery .subscription-select h3 {
+	margin-bottom: 15px;
+
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.delivery-block,
+.pay-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	max-width: 300px;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (min-width : 768px) {
+		max-width: unset;
+		align-items: flex-start;
+	}
+}
+
+.order-form .pay .subscription-select {
+	margin-bottom: 18px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.bonus-block {
+	margin-bottom: 61px;
+
+	@media (min-width : 992px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.bonus-column {
+	max-width: 300px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 23px 14px 20px 25px;
+	background-color: #F5F5F5;
+
+	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@media (min-width : 576px) {
+		max-width: 375px;
+	}
+
+	@media (min-width : 768px) {
+		max-width: 565px;
+	}
+
+	@media (min-width : 992px) {
+		max-width: 460px;
+		margin-bottom: 0px;	
+		margin: 0;	
+	}
+
+	@media (min-width : 1200px) {
+		max-width: 565px;
+		margin-right: 17px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.bonus-inner .inputForGlobal {
+	max-width: 137px;
+	width: 100%;
+	margin-right: 10px;
+
+	&::placeholder {
+		color: #BDBDBD;
+	}
+
+	@media (min-width : 576px) {
+		max-width: 220px;
+	}
+
+	@media (min-width : 768px) {
+		max-width: 332px;
+	}
+
+	@media (min-width : 992px) {
+		max-width: 285px;
+	}
+
+	@media (min-width : 1200px) {
+		max-width: 332px;
+	}
+}
+
+.bonus-column label {
+	margin-bottom: 15px;
+
+	display: block;
+
+	font-size: 18px;
+	line-height: 21px;
+	color: #525252;
+}
+
+.bonus-inner .inputForGlobal {
+	margin-bottom: 0;
+}
+
+.bonus-column button {
+	width: 100px;
+	height: 52px;
+
+	border-radius: 7px;
+
+	@media (min-width : 768px) {
+		width: 180px;
+	}
+
+	@media (min-width : 992px) {
+		width: 120px;
+	}
+
+	@media (min-width : 1200px) {
+		width: 180px;
+	}
+}
+
+.order-form .agree {
+	margin-bottom: 61px;
+}
+
+.order-form .sub {
+	width: 274px;
+	height: 52px;
+
+	border-radius: 7px;	
+	margin: 0 auto;
+	display: block;
+
+	@media (min-width : 768px) {
+		display: inline-block;
+	}
+}
