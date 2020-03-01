@@ -1,41 +1,64 @@
 $(document).ready(function() {
 
-     /*Tabs*/
+    /*Tabs*/
     $('.tab a').click(function(e) {
         e.preventDefault();
         $('a').removeClass('active');
         $(this).addClass('active');
         var tab = $(this).attr('href');
-        $('.tab__box').not(tab).css({'display':'none'});
-        $(tab).fadeIn(400);       
+        $('.tab__box').not(tab).css({
+            'display': 'none'
+        });
+        $(tab).fadeIn(400);
     });
     $('.tab a:first').click();
-    
+
+    $('.tabs-link a').click(function(e) {
+        e.preventDefault();
+        $('.tabs-link a').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('href');
+        $('.tab-cont').not(tab).css({
+            'display': 'none'
+        });
+        $(tab).fadeIn(400);
+    });
+    $('.tabs-link a:first').click();
+
+    $('.check-color__item').click(function(){
+        $('.check-color__item').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
+    $('.product-option__size li').click(function(){
+        $('.product-option__size li').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+
     // font-family: 'Ubuntu';
     // font-family: 'Roboto';
 
-    var itemprice = $('.item-price').text();
-    $('#total').val(itemprice);
+    var itemprice = $('#productPrice').text();
+    $('#quantity').val('1');
+    $(".switch-number .switch-button").on("click", function() {
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+        if ($button.text() == "+") {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        $button.parent().find("input").val(newVal);
 
-    $(".switch__number .switch__button").on("click", function() {
-       var $button = $(this);
-       var oldValue = $button.parent().find("input").val();
-       if ($button.text() == "+") {
-        var newVal = parseFloat(oldValue) + 1;
-    }
-    else {
-        if (oldValue > 1) {
-         var newVal = parseFloat(oldValue) - 1;
-     } else {
-         newVal = 1;
-     }
- }
- $button.parent().find("input").val(newVal);
-
- var quantity = $('#quantity').val();
- var total = itemprice*quantity;
- $('#total').val(total);
-});		
+        var quantity = $('#quantity').val();
+        var total = Number(itemprice) * quantity;
+        console.log(total);
+        $('#productPrice').html(total);
+    });
 
     $('.burger').click(function() {
         $('.main-nav').fadeToggle();
@@ -73,7 +96,7 @@ $(document).ready(function() {
         if (window.matchMedia("(min-width: 992px)").matches) {
             $('.main-nav').removeAttr('style');
             $('.main-nav').removeClass('nav');
-        }else{
+        } else {
             $('.main-nav').addClass('nav');
         }
     });
@@ -116,6 +139,34 @@ $(document).ready(function() {
         }
     });
 
+    var mainSlider = new Swiper('.recom-slider', {
+        spaceBetween: 0,
+        slidesPerView: 4,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            499: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 30
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 40
+            },
+            800: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40
+            }
+        }
+    });
+
     var mainSlider = new Swiper('.main-slider', {
         spaceBetween: 0,
         slidesPerView: 1,
@@ -137,24 +188,24 @@ $(document).ready(function() {
 
 /*Map*/
 
-ymaps.ready(init);
-
-function init(){ 
-        // Creating the map.    
-        var myMap = new ymaps.Map("map", {
-            // The map center coordinates.
-            // Default order: “latitude, longitude”.
-            // To not manually determine the map center coordinates,
-            // use the Coordinate detection tool.
-            center: [55.734222, 37.573824],
-
-            // Zoom level. Acceptable values:
-            // from 0 (the entire world) to 19.
-            zoom: 17,
-            controls: ['zoomControl']
-        });
-        myMap.behaviors.disable('scrollZoom');
-    }
+// ymaps.ready(init);
+//
+// function init() {
+//     // Creating the map.
+//     var myMap = new ymaps.Map("map", {
+//         // The map center coordinates.
+//         // Default order: “latitude, longitude”.
+//         // To not manually determine the map center coordinates,
+//         // use the Coordinate detection tool.
+//         center: [55.734222, 37.573824],
+//
+//         // Zoom level. Acceptable values:
+//         // from 0 (the entire world) to 19.
+//         zoom: 17,
+//         controls: ['zoomControl']
+//     });
+//     myMap.behaviors.disable('scrollZoom');
+// }
 
 
 // var galleryThumbs = new Swiper('.gallery-thumbs', {
