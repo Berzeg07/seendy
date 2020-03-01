@@ -930,7 +930,11 @@ input[type="password"].inputForGlobal {
 }
 
 .brends h1 {
-	margin-bottom: 43px;
+	margin-bottom: 20px;
+
+	@media (min-width : 768px) {
+		margin-bottom: 43px;
+	}
 }
 
 .brends .tab {
@@ -938,36 +942,32 @@ input[type="password"].inputForGlobal {
 }
 
 .brends .tab ul {
-	display: flex;
-	flex-direction: column;
-	
-
-	@media (min-width : 576px) {
-		flex-direction: row;
+	@media (min-width : 420px) {
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin-left: -5px;	
+	}
+
+	@media (min-width : 1165px) {
+		margin-left: -20px;
 	}
 }
 
 .brends .tab li {
-	max-width: 300px;
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 19px;
+	margin-bottom: 5px;
 
-	@media (min-width : 576px) {
-		margin-right: 0;
-		margin-top: 0;
+	@media (min-width : 420px) {
 		margin-left: 5px;
 	}
 
 	@media (min-width : 768px) {
-		margin-left: 20px;
+		margin-bottom: 10px;
 	}
 
 	@media (min-width : 1165px) {
-		max-width: unset;
-		width: auto;
+		margin-bottom: 19px;
+		margin-left: 20px;
 	}
 }
 
@@ -995,26 +995,15 @@ input[type="password"].inputForGlobal {
 	}
 }
 
-.brends .tab {
-	@media (min-width : 576px) {
-		margin-left: -5px;
-	}
-
-	@media (min-width : 768px) {
-		margin-left: -20px;
-	}
-}
-
 .brends .tab a {
-	display: flex;
-	justify-content: center;
+	display: inline-block;
 	background-color: #F5F5F5;
 	border-radius: 23px;
 
-	padding: 13px 28px;	
+	padding: 7px 10px;	
 
-	font-size: 18px;
-	line-height: 21px;
+	font-size: 12px;
+	line-height: 15px;
 	color: #212121;
 	text-align: center;
 
@@ -1023,9 +1012,15 @@ input[type="password"].inputForGlobal {
 		color: #FFFFFF;
 	}	
 
-	@media (min-width : 1165px) {
-		display: inline-block;
-		text-align: left;
+	@media (min-width : 768px) {
+		font-size: 16px;
+		line-height: 19px;
+		padding: 13px 28px;	
+	}
+
+	@media (min-width : 992px) {
+		font-size: 18px;
+		line-height: 21px;
 	}
 }
 
