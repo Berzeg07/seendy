@@ -140,6 +140,24 @@ $(document).ready(function() {
         $(".range-val").val($(".calc-range").slider("value"));
     });
 
+    $(function() {
+        $(".price-range").slider({
+            range: true,
+            min: 100,
+            max: 100000,
+            step: 100,
+            values: [1500, 40000],
+            slide: function(event, ui) {
+                $(".price-inp__left").val(ui.values[0]);
+                $(".price-inp__right").val(ui.values[1]);
+
+            }
+        });
+        $(".price-inp__left").val($(".price-range").slider("values", 0));
+        $(".price-inp__right").val($(".price-range").slider("values", 1));
+    });
+
+
     var mainSlider = new Swiper('.brends-slider', {
         spaceBetween: 0,
         slidesPerView: 6,

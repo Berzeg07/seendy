@@ -1,0 +1,29 @@
+.catalog
+    .container
+        .breadcrumbs
+            ul.breadcrumbs-list
+                li
+                    a(href="/").breadcrumbs-link.breadcrumbs-link_home
+                li
+                    a(href="#").breadcrumbs-link Apple
+                li
+                    a(href="#").breadcrumbs-link Apple Watch
+        
+        h1.main-title Товары Apple
+        .catalog__inner
+            .sidebar
+                form(action="#")
+                    .sidebar__price.shadow-block
+                        .sidebar__title Цена
+                        .price-inp
+                            input(type="text" disabled).inputForGlobal.price-inp__left
+                            input(type="text" disabled).inputForGlobal.price-inp__right
+                        
+                        .custom-range.price-range
+                        
+                    .sidebar__discount.shadow-block
+                        .subscription
+                            input(type="checkbox")#discountCheck
+                            label(for="discountCheck") Товары со скидкой
+                        
+            .catalog__content    
