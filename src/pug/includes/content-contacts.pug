@@ -14,15 +14,15 @@
 				h2 Напишите нам
 				
 				.form-cell
-					label(for="firstname") Имя
+					label.required(for="firstname") Имя
 					input(type="text" placeholder="Имя").inputForGlobal
 				
 				.form-cell
-					label(for="email") E-Mail
+					label.required(for="email") E-Mail
 					input(type="email" placeholder="E-Mail").inputForGlobal
 				
 				.form-cell
-					label(for="message") Ваш вопрос или сообщение
+					label.required(for="message") Ваш вопрос или сообщение
 					textarea(placeholder="Ваш вопрос или сообщение")
 
 				button(type="submit").btn-light Отправить
