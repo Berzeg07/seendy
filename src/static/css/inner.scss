@@ -1619,8 +1619,8 @@ input[type="password"].inputForGlobal {
 			width: 460px;
 		}
 
-		@media (min-width : 560px) {
-			width: 540px;
+		@media (min-width : 565px) {
+			width: 518px;
 		}
 
 	}
@@ -1630,7 +1630,7 @@ input[type="password"].inputForGlobal {
 		align-items: center;
 		position: relative;
 		padding-top: 30px;
-		min-width: 80px;
+		min-width: 75px;
 
 		&::before {
 			background-color: #F5F5F5;
