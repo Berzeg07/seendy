@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+    $('.filter-show').click(function(){
+        $('.sidebar__form').slideToggle();
+    });
+
+    $('.sort-show').click(function(){
+        $(this).toggleClass('is-active');
+    });
+
     $('.page-list a').click(function(e) {
         e.preventDefault();
         $('.page-list a').removeClass('is-active');
@@ -238,29 +246,30 @@ $(document).ready(function() {
 
 let buttonBasket = document.querySelectorAll('.basket__button');
 
-    buttonBasket.forEach(function(item) {
-        item.addEventListener('click', function() {
-           this.parentElement.parentElement.remove()
-        });
+buttonBasket.forEach(function(item) {
+    item.addEventListener('click', function() {
+        this.parentElement.parentElement.remove()
     });
+});
 
 /*Map*/
+var contactBlock = document.querySelector('.contacts');
+if (contactBlock != null) {
+    ymaps.ready(init);
+    function init() {
+        // Creating the map.
+        var myMap = new ymaps.Map("map", {
+            // The map center coordinates.
+            // Default order: “latitude, longitude”.
+            // To not manually determine the map center coordinates,
+            // use the Coordinate detection tool.
+            center: [55.734222, 37.573824],
 
-// ymaps.ready(init);
-//
-// function init() {
-//     // Creating the map.
-//     var myMap = new ymaps.Map("map", {
-//         // The map center coordinates.
-//         // Default order: “latitude, longitude”.
-//         // To not manually determine the map center coordinates,
-//         // use the Coordinate detection tool.
-//         center: [55.734222, 37.573824],
-//
-//         // Zoom level. Acceptable values:
-//         // from 0 (the entire world) to 19.
-//         zoom: 17,
-//         controls: ['zoomControl']
-//     });
-//     myMap.behaviors.disable('scrollZoom');
-// }
+            // Zoom level. Acceptable values:
+            // from 0 (the entire world) to 19.
+            zoom: 17,
+            controls: ['zoomControl']
+        });
+        myMap.behaviors.disable('scrollZoom');
+    }
+}

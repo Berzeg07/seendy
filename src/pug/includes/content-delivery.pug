@@ -8,7 +8,7 @@
                     a(href="/").breadcrumbs-link Калькулятор доставки
 
         h1.main-title.delivery-calc__title Калькулятор доставки
-        
+
         form(action="#").form-calc
             ul.form-calc__list
                 li.form-cell
@@ -24,15 +24,21 @@
                 li.form-cell
                     label Индекс
                     input(type="text").inputForGlobal
-                li.form-cell
-                    label Вес посылки 
+                li
                     .form-calc__inner
-                        .range-block
-                            .calc-range.custom-range
-                        input(type="text").range-val.inputForGlobal
+                        .column-box
+                            p.column-box__article Вес посылки
+
+                            .range-block
+                                .calc-range.custom-range
+
+                        .column-box
+                            p Кг
+                            input(type="text").range-val.inputForGlobal
+
             .form-calc__btn-wrap
                 button(type="submit").btn-light.form-calc__btn Расчет доставки
-        
+
         .deliv-comp
             .deliv-comp__item.is-active
                 .deliv-comp__img
@@ -58,7 +64,7 @@
                 .deliv-comp__title Econom4
                 .deliv-comp__days 20-25 дней
                 .deliv-comp__price $30.99
-        
+
         table.deliv-current
             thead
                 tr

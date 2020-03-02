@@ -12,7 +12,24 @@
         h1.main-title Товары Apple
         .catalog__inner
             .sidebar
-                form(action="#")
+                .category-mobile
+                    ul
+                        li.shadow-block
+                            a(href="#") Каталог 1
+                        li.shadow-block
+                            a(href="#") Каталог 2
+                        li.shadow-block
+                            a(href="#") Каталог 3
+                        li.shadow-block
+                            a(href="#") Каталог 4
+                        li.shadow-block
+                            a(href="#") Каталог 5
+                .mobile-buttons
+                    button(type="button").filter-show Фильтр
+                    button(type="button").sort-show
+                    
+                
+                form(action="#").sidebar__form
                     .sidebar__price.shadow-block
                         .sidebar__title Цена
                         .price-inp
@@ -93,12 +110,13 @@
                                 .sidebar__count 2
 
                     .sidebar__btn
+                        button(type="submit").btn-dark Очистить фильтр
                         button(type="submit").btn-light Применить 
 
 
             .catalog__content
                 .filter
-                    .form-cell
+                    .form-cell.sorting-select
                         label Сортировать по:
                         .my-select
                             select.js-example-basic-single
