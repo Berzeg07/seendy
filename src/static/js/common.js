@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    $('.page-list a').click(function(e) {
+        e.preventDefault();
+        $('.page-list a').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+    $('.page-list a:first').click();
+
     $('.tab a').click(function(e) {
         e.preventDefault();
         $('a').removeClass('active');
@@ -72,7 +79,6 @@ $(document).ready(function() {
 
         var quantity = $('#quantity').val();
         var total = Number(itemprice) * quantity;
-        console.log(total);
         $('#productPrice').html(total);
     });
 
@@ -258,26 +264,3 @@ let buttonBasket = document.querySelectorAll('.basket__button');
 //     });
 //     myMap.behaviors.disable('scrollZoom');
 // }
-
-
-// var galleryThumbs = new Swiper('.gallery-thumbs', {
-//     spaceBetween: 10,
-//     slidesPerView: 4,
-//     loop: true,
-//     freeMode: true,
-//     loopedSlides: 5, //looped slides should be the same
-//     watchSlidesVisibility: true,
-//     watchSlidesProgress: true,
-// });
-// var galleryTop = new Swiper('.gallery-top', {
-//     spaceBetween: 10,
-//     loop: true,
-//     loopedSlides: 5, //looped slides should be the same
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//     thumbs: {
-//         swiper: galleryThumbs,
-//     },
-// });
